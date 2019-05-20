@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+
+html,
+body {
+  min-width: 290px;
+  color: #4d4e53;
+  background-color: #ffffff;
+  font-family: "Open Sans", Arial, sans-serif;
+  line-height: 1.5;
+}
+
+#navbar {
+  position: fixed;
+  min-width: 290px;
+  top: 0px;
+  left: 0px;
+  width: 300px;
+  height: 100%;
+  border-right: solid;
+  border-color: rgba(0, 22, 22, 0.4);
+}
+
+header {
+  color: black;
+  margin: 10px;
+  text-align: center;
+  font-size: 1.8em;
+  font-weight: thin;
+}
+
+#main-doc header {
+  text-align: left;
+  margin: 0px;
+}
+
+#navbar ul {
+  height: 88%;
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#navbar li {
+  color: #4d4e53;
+  border-top: 1px solid;
+  list-style: none;
+  position: relative;
+  width: 100%;
+}
+
+#navbar a {
+  display: block;
+  padding: 10px 30px;
+  color: #4d4e53;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#main-doc {
+  position: absolute;
+  margin-left: 310px;
+  padding: 20px;
+  margin-bottom: 110px;
+}
+
+section article {
+  color: #4d4e53;
+  margin: 15px;
+  font-size: 0.96em;
+}
+
+section li {
+  margin: 15px 0px 0px 20px;
+}
+
+code {
+  display: block;
+  text-align: left;
+  white-space: pre;
+  position: relative;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 2;
+  background-color: #f7f7f7;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 815px) {
+  /* For mobile phones: */
+  #navbar ul {
+    border: 1px solid;
+    height: 207px;
+  }
+
+  #navbar {
+    background-color: white;
+    position: absolute;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-height: 275px;
+    border: none;
+    z-index: 1;
+    border-bottom: 2px solid;
+  }
+
+  #main-doc {
+    position: relative;
+    margin-left: 0px;
+    margin-top: 270px;
+  }
+}
+
+
+
+
+.visually-hidden {
+    position: absolute; 
+    overflow: hidden; 
+    clip: rect(0 0 0 0); 
+    height: 1px; width: 1px; 
+    margin: -1px; padding: 0; border: 0;
+}
+.dr-wrapper {
+    height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.nav-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 80px;
+    border-right: 1px solid #f6f6f6;
+    border-left: 1px solid #f6f6f6;
+    box-shadow: 0 0 9px 4px #f2f2f2;
+
+    
+
+}
+
+.nav-panel {
+    position: absolute;
+    top:0;
+    right: 0;
+    display: flex;
+    background-color: #fff;
+}
+.hamburger{
+    background-color: #fff;
+    display: block;
+    position: relative;
+    right: -100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    font-size: 0;
+    text-indent: -9999px;
+    appearance: none;
+    box-shadow: none;
+    border-radius: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+    box-shadow: 5px 5px 5px #f2f2f2;
+    
+
+}
+
+
+.nav-bar #hidden-menu:checked + label > .nav-panel > .hamburger{
+    right: 15px;
+    box-shadow: 0 0 0 #f2f2f2;
+}
+
+.nav-bar label{
+    display: block;
+    width: 354px;
+    transition: width 0.3s;
+    overflow: hidden;
+}
+
+.nav-bar #hidden-menu:checked + label {
+    width: 80px;
+    transition: width 0.3s;
+}
+
+
+.dr-logo {
+    background: red;
+    width: 194px;
+    height: 194px;
+    margin: 0 0 2rem;
+    display: block;
+}
+
+.member-status {
+    color: #000;
+    font-size: 0.8rem;
+    margin-bottom: 3rem;
+}
+//------------------------
+// FADE LOGO NAV BAR
+//------------------------
+.nav-bar__logo-fade.nav-bar {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    min-width: 80px;
+    border-right: 1px solid #f6f6f6;
+    border-left: 1px solid #f6f6f6;
+    box-shadow: 0 0 9px 4px #f2f2f2;
+
+    // container hide elements
+    .nav-bar__holder {
+        width: 220px;
+        padding: 4rem 44px;
+        transition: opacity 0.2s;
+    }
+  
+    // nav-panel
+    .nav-panel {
+        position: absolute;
+        top:0;
+        right: 0;
+        display: flex;
+        background-color: #fff;
+    }
+    // nav-panel hamburger
+    .hamburger{
+        background-color: #fff;
+        display: block;
+        position: relative;
+        right: -100%;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        width: 50px;
+        height: 50px;
+        font-size: 0;
+        text-indent: -9999px;
+        appearance: none;
+        box-shadow: none;
+        border-radius: none;
+        border: none;
+        cursor: pointer;
+        transition: background 0.3s;
+        box-shadow: 5px 5px 5px #f2f2f2;
+
+        span{
+            display: block;
+            position: absolute;
+            top: 23px;
+            left: 10px;
+            right: 10px;
+            height: 4px;
+            background: #dce0e3;
+            transition: transform 0.3s;
+            &::before,
+            &::after {
+                position: absolute;
+                display: block;
+                left: 0;
+                width: 100%;
+                height: 4px;
+                background-color: #dce0e3;
+                content: "";
+            }
+            &::before {
+                top: -10px;
+                transform-origin: top right;
+                transition: transform 0.3s, width 0.3s, top 0.3s;
+            }
+            &::after{
+                bottom: -10px;
+                transform-origin: bottom right;
+                transition: transform 0.3s, width 0.3s, bottom 0.3s;
+            }
+        }
+    }
+
+}
+.nav-bar.nav-bar__logo-fade #hidden-menu-fade:checked + label .nav-bar__holder {
+    opacity: 0;
+}
+
+// open-close nav bar
+.nav-bar.nav-bar__logo-fade #hidden-menu-fade:checked + label > .nav-panel > .hamburger{
+    right: 15px;
+    box-shadow: 0 0 0 #f2f2f2;
+}
+
+.nav-bar.nav-bar__logo-fade label{
+    display: block;
+    width: 220px;
+    transition: width 0.3s;
+    overflow: hidden;
+}
+
+.nav-bar.nav-bar__logo-fade #hidden-menu-fade:checked + label {
+    width: 80px;
+    transition: width 0.3s;
+}
+
+// ------------ navigation 
+.nav-bar.nav-bar__logo-fade #nav {
+    width: 220px;
+    font-size: 14px;
+
+    svg {
+        fill: #ccc;
+    }
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    a {
+        text-decoration: none;
+        padding: 12px 0 12px;
+        display: flex;
+        align-items: center;
+        color: #ccc;
+        transition: all 0.3s;
+    }
+    li{
+        margin-bottom: 2rem;
+        &:hover,
+        &.active {
+            a{
+                box-shadow: inset 2px 0 0 red;
+                background-color: #f6f7f9;
+                color: #000;
+                font-weight: 500;
+            }
+            svg {
+                fill: red;
+            }
+        }
+    }
+    
+    .nav-icon {
+        width: 80px;
+        text-align: center;
+    }
+}
+
+// logo block
+.nav-bar.nav-bar__logo-fade .dr-logo {
+    width: 132px;
+    height: 132px;
+    margin: 0 0 2rem;
+    display: block;
+}
+
+// member-status block
+.nav-bar.nav-bar__logo-fade .member-status {
+    color: #000;
+    font-size: 0.8rem;
+    margin-bottom: 3rem;
+}
+  
